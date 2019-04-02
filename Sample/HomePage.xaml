@@ -1,0 +1,293 @@
+﻿<Page xmlns:my="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+    x:Class="Sample.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ScrollViewer x:Name="parentScroller" HorizontalScrollBarVisibility="Auto" HorizontalScrollMode="Auto">
+            <ContentControl x:Name="parentUI" IsEnabled="False">
+                <RelativePanel x:Name="homePanel" Background="LightGray">
+                    <TextBlock x:Uid="homeTitle" x:Name="homeTitle" Text="Basic MFP Information" FontSize="25" Margin="10" />
+                    <ProgressBar x:Name="progBar" IsIndeterminate="True" Width="1000" Margin="10" RelativePanel.Below="homeTitle" ShowError="False" ShowPaused="False" Visibility="Visible" Foreground="Green" />
+                    <TextBlock x:Uid="statusText" x:Name="statusMsg" RelativePanel.Below="homeTitle" Margin="30,15" Text="Retrieving Basic MFP Info, Please wait..." FontSize="15" FontStyle="Oblique" />
+
+                    <Grid x:Name="gridView" RelativePanel.Below="statusMsg" RelativePanel.Above="footerStatus">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image x:Name="mfpImage" Source="ms-appx:///Assets/web-slide_6506ac-700x460.png" Stretch="None" Margin="2" />
+
+                        <Grid x:Name="basicGrid" Margin="2" Grid.Row="1" Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock x:Uid="nameLabel" Text="Name:" Margin="10" FontSize="20" Grid.Row="0" Grid.Column="0" />
+                            <TextBlock x:Name="mfpName" Margin="10" Foreground="Green" FontSize="20" Grid.Row="0" Grid.Column="1" />
+
+                            <TextBlock x:Uid="manfLabel" Text="Manufacturer:" Margin="10" FontSize="20" Grid.Row="1" Grid.Column="0" />
+                            <TextBlock x:Name="mfpManf" Margin="10" Foreground="Green" FontSize="20" Grid.Row="1" Grid.Column="1" />
+
+                            <TextBlock x:Uid="serialLabel" Text="Serial Number:" Margin="10" FontSize="20" Grid.Row="2" Grid.Column="0" />
+                            <TextBlock x:Name="mfpSerial" Margin="10" Foreground="Green" FontSize="20" Grid.Row="2" Grid.Column="1" />
+
+                            <TextBlock x:Uid="macLabel" Text="Physical Address:" Margin="10" FontSize="20" Grid.Row="3" Grid.Column="0" />
+                            <TextBlock x:Name="mfpMAC" Margin="10" Foreground="Green" FontSize="20" Grid.Row="3" Grid.Column="1" />
+
+                            <TextBlock x:Uid="modelLabel" Text="Model:" Margin="10" FontSize="20" Grid.Row="4" Grid.Column="0" />
+                            <TextBlock x:Name="mfpModel" Margin="10" Foreground="Green" FontSize="20" Grid.Row="4" Grid.Column="1"/>
+
+                            <TextBlock x:Uid="locLabel" Text="Physical Location:" Margin="10" FontSize="20" Grid.Row="5" Grid.Column="0" />
+                            <TextBlock x:Name="mfpLoc" Margin="10" Foreground="Green" FontSize="20" Grid.Row="5" Grid.Column="1" />
+
+                            <TextBlock x:Uid="shiptypeLabel" Text="Shipment Type:" Margin="10" FontSize="20" Grid.Row="6" Grid.Column="0" />
+                            <TextBlock x:Name="mfpShipType" Margin="10" Foreground="Green" FontSize="20" Grid.Row="6" Grid.Column="1" />
+                        </Grid>
+
+                        <StackPanel x:Name="infoPanel" Grid.Column="1" Grid.RowSpan="2" Margin="50,0" HorizontalAlignment="Center">
+                            <my:Expander x:Uid="statusExpLabel" x:Name="statusExpander" IsExpanded="False" Header="Status" ExpandDirection="Right">
+                                <StackPanel x:Name="statusPanel">
+                                    <TextBlock x:Uid="statusTextLabel" Text="Status" FontStyle="Oblique" Foreground="Green" FontWeight="SemiBold" FontSize="30" />
+                                    <StackPanel x:Name="prinStatusPanel" Orientation="Horizontal">
+                                        <TextBlock x:Uid="prinStatusLabel" Text="Printer Status: " FontSize="20" />
+                                        <TextBlock x:Name="prinStatus" FontSize="20" Foreground="Green" Margin="15,0" />
+                                    </StackPanel>
+                                    <StackPanel x:Name="statusDetail" Margin="10">
+                                    </StackPanel>
+                                </StackPanel>
+                            </my:Expander>
+
+                            <my:Expander x:Uid="hwExpLabel" x:Name="hWInfoExpander" IsExpanded="False" Header="Hardware Information" ExpandDirection="Right" Margin="0,5">
+                                <StackPanel x:Name="hwInfoPanel" Margin="35,0">
+                                    <TextBlock x:Uid="hwInfoLabel" Text="Hardware Info" FontStyle="Oblique" Foreground="Green" FontWeight="SemiBold" FontSize="30" />
+
+                                    <my:Expander x:Uid="finExpLabel" x:Name="finisherExpander" IsExpanded="False" Header="Finisher" ExpandDirection="Down" FontStyle="Italic">
+                                        <Grid x:Name="finisherGrid" Margin="10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock x:Uid="finStatusLabel" Text="Status: " FontSize="20" Grid.Row="0" Grid.Column="0" />
+                                            <TextBlock x:Name="finishStatus" FontSize="20" Foreground="Green" Grid.Row="0" Grid.Column="1" Margin="5,0" />
+
+                                            <TextBlock x:Uid="stapleLabel" Text="Staple Unit: " FontSize="20" Grid.Row="1" Grid.Column="0" />
+                                            <TextBlock x:Name="stapleStatus" FontSize="20" Foreground="Green" Grid.Row="1" Grid.Column="1" Margin="5,0" />
+
+                                            <TextBlock x:Uid="saddleLabel" Text="Saddle Stitch Unit: " FontSize="20" Grid.Row="3" Grid.Column="0" />
+                                            <TextBlock x:Name="saddleStatus" FontSize="20" Foreground="Green" Grid.Row="3" Grid.Column="1" Margin="5,0" />
+
+                                            <TextBlock x:Uid="holeLabel" Text="Hole Punch: " FontSize="20" Grid.Row="2" Grid.Column="0" />
+                                            <TextBlock x:Name="holeStatus" FontSize="20" Foreground="Green" Grid.Row="2" Grid.Column="1" Margin="5,0" />
+                                        </Grid>
+                                    </my:Expander>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Uid="faxLabel" Text="Fax:" FontStyle="Italic" FontSize="20" />
+                                        <TextBlock x:Name="faxStatus" FontStyle="Italic" FontSize="20" Foreground="Green" Margin="20,0" />
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Uid="adfLabel" Text="ADF:" FontStyle="Italic" FontSize="20" />
+                                        <TextBlock x:Name="adfStatus" FontStyle="Italic" FontSize="20" Foreground="Green" Margin="20,0" />
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Uid="hddLabel" Text="HDD:" FontStyle="Italic" FontSize="20" />
+                                        <TextBlock x:Name="hddStatus" FontStyle="Italic" FontSize="20" Foreground="Green" Margin="20,0" />
+                                    </StackPanel>
+
+                                    <my:Expander x:Uid="tonExpLabel" x:Name="tonerExpander" IsExpanded="False" Header="Toner" ExpandDirection="Down" FontStyle="Italic">
+                                        <Grid x:Name="tonerGrid" Margin="10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock x:Uid="tonStatusLabel" Text="Status: " FontSize="20" Grid.Row="0" Grid.Column="0" />
+                                            <TextBlock x:Name="tonerStatus" FontSize="20" Foreground="Green" Grid.Row="0" Grid.Column="1" Margin="5,0" />
+
+                                            <TextBlock x:Uid="yTonLabel" Text="Yellow Toner: " FontSize="20" Grid.Row="1" Grid.Column="0" />
+                                            <TextBlock x:Name="yTonerStatus" FontSize="20" Foreground="Green" Grid.Row="1" Grid.Column="1" Margin="5,0" />
+
+                                            <TextBlock x:Uid="mTonLabel" Text="Magenta Toner: " FontSize="20" Grid.Row="2" Grid.Column="0" />
+                                            <TextBlock x:Name="mTonerStatus" FontSize="20" Foreground="Green" Grid.Row="2" Grid.Column="1" Margin="5,0" />
+
+                                            <TextBlock x:Uid="cTonLabel" Text="Cyan Toner: " FontSize="20" Grid.Row="3" Grid.Column="0" />
+                                            <TextBlock x:Name="cTonerStatus" FontSize="20" Foreground="Green" Grid.Row="3" Grid.Column="1" Margin="5,0" />
+
+                                            <TextBlock x:Uid="bTonLabel" Text="Black Toner: " FontSize="20" Grid.Row="4" Grid.Column="0" />
+                                            <TextBlock x:Name="kTonerStatus" FontSize="20" Foreground="Green" Grid.Row="4" Grid.Column="1" Margin="5,0" />
+                                        </Grid>
+                                    </my:Expander>
+
+                                    <my:Expander x:Uid="memExpLabel" x:Name="memoryExpander" IsExpanded="False" Header="Memory" ExpandDirection="Down" FontStyle="Italic">
+                                        <StackPanel x:Name="memoryPanel" Margin="10">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock x:Uid="memStatusLabel" Text="Status: " FontSize="20" />
+                                                <TextBlock x:Name="memStatus" FontSize="20" Margin="20,0" Foreground="Green" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock x:Uid="memSizeLabel" Text="Size: " FontSize="20" />
+                                                <TextBlock x:Name="memSize" FontSize="20" Margin="20,0" Foreground="Green" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </my:Expander>
+
+                                    <my:Expander x:Uid="casExpLabel" x:Name="cassetteExpander" IsExpanded="False" Header="Cassette" ExpandDirection="Down" FontStyle="Italic">
+                                        <StackPanel x:Name="cassettePanel">
+                                            <TextBlock x:Uid="cas1Label" Text="Cassette1" FontStyle="Italic" Foreground="Green" FontSize="20" />
+                                            <Grid x:Name="cas1Grid" Margin="10">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock x:Uid="cas1StatusLabel" Text="Status: " FontSize="20" Grid.Row="0" Grid.Column="0" />
+                                                <TextBlock x:Name="cas1Status" FontSize="20" Foreground="Green" Grid.Row="0" Grid.Column="1" Margin="5,0" />
+
+                                                <TextBlock x:Uid="cas1PapSizeLabel" Text="Paper Size: " FontSize="20" Grid.Row="1" Grid.Column="0" />
+                                                <TextBlock x:Name="cas1PaperSize" FontSize="20" Foreground="Green" Grid.Row="1" Grid.Column="1" Margin="5,0" />
+
+                                                <TextBlock x:Uid="cas1RemSizeLabel" Text="Remaining Paper: " FontSize="20" Grid.Row="2" Grid.Column="0" />
+                                                <TextBlock x:Name="cas1RemPaper" FontSize="20" Foreground="Green" Grid.Row="2" Grid.Column="1" Margin="5,0" />
+                                            </Grid>
+                                            <TextBlock x:Uid="cas2Label" Text="Cassette2" FontStyle="Italic" Foreground="Green" FontSize="20" />
+                                            <Grid x:Name="cas2Grid" Margin="10">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock x:Uid="cas2StatusLabel" Text="Status: " FontSize="20" Grid.Row="0" Grid.Column="0" />
+                                                <TextBlock x:Name="cas2Status" FontSize="20" Foreground="Green" Grid.Row="0" Grid.Column="1" Margin="5,0" />
+
+                                                <TextBlock x:Uid="cas2PapSizeLabel" Text="Paper Size: " FontSize="20" Grid.Row="1" Grid.Column="0" />
+                                                <TextBlock x:Name="cas2PaperSize" FontSize="20" Foreground="Green" Grid.Row="1" Grid.Column="1" Margin="5,0" />
+
+                                                <TextBlock x:Uid="cas2RemSizeLabel" Text="Remaining Paper: " FontSize="20" Grid.Row="2" Grid.Column="0" />
+                                                <TextBlock x:Name="cas2RemPaper" FontSize="20" Foreground="Green" Grid.Row="2" Grid.Column="1" Margin="5,0" />
+                                            </Grid>
+                                        </StackPanel>
+                                    </my:Expander>
+                                </StackPanel>
+                            </my:Expander>
+
+                            <my:Expander x:Uid="countExpLabel" x:Name="counterExpander" IsExpanded="False" Header="Counters" ExpandDirection="Right" Margin="0,5">
+                                <StackPanel x:Name="countersPanel">
+                                    <TextBlock x:Uid="countLabel" Text="Counters" FontStyle="Oblique" Foreground="Green" FontWeight="SemiBold" FontSize="30" />
+                                    <Grid x:Name="countersGrid" Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock x:Uid="totCountLabel" Text="Total Print Counter: " FontSize="20" Grid.Row="0" Grid.Column="0" />
+                                        <TextBlock x:Name="printCounter" FontSize="20" Foreground="Green" Grid.Row="0" Grid.Column="1" Margin="5,0" />
+
+                                        <TextBlock x:Uid="faxCountLabel" Text="Total Fax Counter: " FontSize="20" Grid.Row="1" Grid.Column="0" />
+                                        <TextBlock x:Name="faxCounter" FontSize="20" Foreground="Green" Grid.Row="1" Grid.Column="1" Margin="5,0" />
+
+                                        <TextBlock x:Uid="scanCountLabel" Text="Total Scan Counter: " FontSize="20" Grid.Row="2" Grid.Column="0" />
+                                        <TextBlock x:Name="scanCounter" FontSize="20" Foreground="Green" Grid.Row="2" Grid.Column="1" Margin="5,0" />
+                                    </Grid>
+                                </StackPanel>
+                            </my:Expander>
+                        </StackPanel>
+                    </Grid>
+
+                    <StackPanel x:Name="footerStatus" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                        <TextBlock x:Uid="footStatusLabel" x:Name="statusLabel" FontSize="15" Text="Connecting..." Margin="10,10,0,10" FontStyle="Oblique" FontWeight="SemiBold" />
+                    </StackPanel>
+                    <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                        <TextBlock x:Name="ipLabel" FontSize="15" Margin="0,0,15,10" Foreground="Green" FontStyle="Oblique" FontWeight="SemiBold" />
+                    </StackPanel>
+                    <!--<local:FooterControl Margin="20,0,0,0" x:Name="footerBar" RelativePanel.AlignBottomWithPanel="True" RelativePanel.Below="homeDesc" MFPStatus="Connecting..." MFPIP="10.188.101.80" Width="1260" />-->
+                </RelativePanel>
+            </ContentControl>
+        </ScrollViewer>
+
+        <ContentControl  x:Name="loginUI"  Height="400" Margin="0,94,0,124">
+            <Popup x:Name="loginPopup" IsOpen="False">
+                <RelativePanel x:Name="loginPanel" Background="#FF363635" Opacity=".9">
+                    <StackPanel Orientation="Vertical" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                        <TextBlock x:Uid="headingText" x:Name="headingLabel" Text="Sign In With a Stage 2 Account" Foreground="Green" FontSize="30" RelativePanel.Below="titleName" Margin="0,10,0,20" FontWeight="SemiBold" RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                        <Grid x:Name="loginGrid" RelativePanel.Below="headingLabel" Margin="0,20,0,0" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock x:Uid="ipLabel" Text="Default MFP IP Address" FontSize="25" Foreground="Green" Margin="10,0,0,20" />
+                            <TextBlock x:Name="ipValue" FontSize="25" Grid.Column="1" Margin="30,0,0,10" />
+
+                            <!--<TextBlock x:Uid="unameLabel" Text="User Name" FontSize="25" Foreground="Green" Grid.Row="1" Grid.Column="0" Margin="0,10" />-->
+                            <TextBox x:Name="unameValue" FontSize="25" Margin="10,0" Grid.Row="1" Grid.ColumnSpan="2" Width="400" />
+
+                            <!--<TextBlock x:Uid="passLabel" Text="Password" FontSize="25" Foreground="Green" Grid.Row="2" Grid.Column="0" Margin="0,10" />-->
+                            <PasswordBox x:Name="passValue" FontSize="25" Margin="10,10" Grid.Row="2" Grid.ColumnSpan="2" Width="400" IsPasswordRevealButtonEnabled="True" />
+
+                            <Button x:Uid="buttonText" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="Sign In" Padding="8" Margin="20" Width="200" BorderBrush="Green" Foreground="White" Background="Green" Click="Button_Click" />
+                        </Grid>
+                        <ProgressRing x:Name="progRing" RelativePanel.Below="loginGrid" RelativePanel.AlignHorizontalCenterWithPanel="True" IsActive="False" Height="75" Width="75" Margin="0,10" Foreground="Green" />
+                        <TextBlock x:Uid="statusLabel" x:Name="statusText" RelativePanel.Below="progRing" FontStyle="Oblique" FontSize="20" FontWeight="Bold" Foreground="Green" Margin="0,20" RelativePanel.AlignHorizontalCenterWithPanel="True" />
+                    </StackPanel>
+                </RelativePanel>
+            </Popup>
+        </ContentControl>
+    </Grid>
+</Page>

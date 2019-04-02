@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppDisplayName" xml:space="preserve">
+    <value>Univ MFP Viewer</value>
+  </data>
+  <data name="basicNavItem.Content" xml:space="preserve">
+    <value>基本的なMFP情報</value>
+  </data>
+  <data name="discNavItem.Content" xml:space="preserve">
+    <value>MFPの発見</value>
+  </data>
+  <data name="homePageTitle.Text" xml:space="preserve">
+    <value>Univ MFP Viewer</value>
+  </data>
+  <data name="IDS_CHKDLG_CLOSE" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="IDS_CHKDLG_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="IDS_CHKDLG_TITLE" xml:space="preserve">
+    <value>MFPダイアログ</value>
+  </data>
+  <data name="aboutInfo.Text" xml:space="preserve">
+    <value>Version 1.0.0.0</value>
+  </data>
+  <data name="aboutTab.Header" xml:space="preserve">
+    <value>約</value>
+  </data>
+  <data name="adfLabel.Text" xml:space="preserve">
+    <value>ADF: </value>
+  </data>
+  <data name="bTonLabel.Text" xml:space="preserve">
+    <value>ブラックトナー：</value>
+  </data>
+  <data name="buttonText.Content" xml:space="preserve">
+    <value>サインイン</value>
+  </data>
+  <data name="cas1Label.Text" xml:space="preserve">
+    <value>カセット1</value>
+  </data>
+  <data name="cas1PapSizeLabel.Text" xml:space="preserve">
+    <value>用紙サイズ：</value>
+  </data>
+  <data name="cas1RemSizeLabel.Text" xml:space="preserve">
+    <value>残りの紙：</value>
+  </data>
+  <data name="cas1StatusLabel.Text" xml:space="preserve">
+    <value>状態：</value>
+  </data>
+  <data name="cas2Label.Text" xml:space="preserve">
+    <value>カセット2</value>
+  </data>
+  <data name="cas2PapSizeLabel.Text" xml:space="preserve">
+    <value>用紙サイズ：</value>
+  </data>
+  <data name="cas2RemSizeLabel.Text" xml:space="preserve">
+    <value>残りの紙：</value>
+  </data>
+  <data name="cas2StatusLabel.Text" xml:space="preserve">
+    <value>状態：</value>
+  </data>
+  <data name="casExpLabel.Header" xml:space="preserve">
+    <value>カセット</value>
+  </data>
+  <data name="comboLabel.Header" xml:space="preserve">
+    <value>起動時にページを選択</value>
+  </data>
+  <data name="compLink.Content" xml:space="preserve">
+    <value />
+  </data>
+  <data name="countExpLabel.Header" xml:space="preserve">
+    <value>カウンター</value>
+  </data>
+  <data name="countLabel.Text" xml:space="preserve">
+    <value>カウンター</value>
+  </data>
+  <data name="cTonLabel.Text" xml:space="preserve">
+    <value>シアントナー：</value>
+  </data>
+  <data name="discTitle.Text" xml:space="preserve">
+    <value>MFPの発見</value>
+  </data>
+  <data name="faxCountLabel.Text" xml:space="preserve">
+    <value>トータルFAXカウンター：</value>
+  </data>
+  <data name="faxLabel.Text" xml:space="preserve">
+    <value>ファックス：</value>
+  </data>
+  <data name="finExpLabel.Header" xml:space="preserve">
+    <value>フィニッシャー</value>
+  </data>
+  <data name="finStatusLabel.Text" xml:space="preserve">
+    <value>状態：</value>
+  </data>
+  <data name="footStatusLabel.Text" xml:space="preserve">
+    <value>接続中...</value>
+  </data>
+  <data name="hddLabel.Text" xml:space="preserve">
+    <value>HDD: </value>
+  </data>
+  <data name="headingText.Text" xml:space="preserve">
+    <value>サインイン</value>
+  </data>
+  <data name="holeLabel.Text" xml:space="preserve">
+    <value>穴あけ器：</value>
+  </data>
+  <data name="homeTitle.Text" xml:space="preserve">
+    <value>基本的なMFP情報</value>
+  </data>
+  <data name="hwExpLabel.Header" xml:space="preserve">
+    <value>ハードウェア情報</value>
+  </data>
+  <data name="hwInfoLabel.Text" xml:space="preserve">
+    <value>ハードウェア情報</value>
+  </data>
+  <data name="ID_FOOTER_DEF_STATUS" xml:space="preserve">
+    <value>接続中...</value>
+  </data>
+  <data name="ID_FOOTER_FAIL_STATUS" xml:space="preserve">
+    <value>接続障害</value>
+  </data>
+  <data name="ID_LOGIN_EMPTY_MSG" xml:space="preserve">
+    <value>ユーザー名またはパスワードは空にできません！</value>
+  </data>
+  <data name="ID_LOGIN_EXCPTN_MSG" xml:space="preserve">
+    <value>ログイン失敗!!!</value>
+  </data>
+  <data name="ID_LOGIN_FAILURE_MSG" xml:space="preserve">
+    <value>提供された資格情報でログインできませんでした...</value>
+  </data>
+  <data name="ID_LOGIN_PROGRESS_MSG" xml:space="preserve">
+    <value>ログイン中...</value>
+  </data>
+  <data name="ID_RETRY_MSG" xml:space="preserve">
+    <value>リトライ</value>
+  </data>
+  <data name="ID_STARTUP_ERR_PORT_MSG" xml:space="preserve">
+    <value>MFPアドレスを取得できませんでした。適切なプリンタポート名形式で設定してください</value>
+  </data>
+  <data name="ID_STATUS_BASIC_MSG" xml:space="preserve">
+    <value>基本的なデバイス情報の取得中...</value>
+  </data>
+  <data name="ID_STATUS_BASIC_TIMEOUT_MSG" xml:space="preserve">
+    <value>基本デバイス情報のフェッチタイムアウト</value>
+  </data>
+  <data name="ID_STATUS_COUNT_MSG" xml:space="preserve">
+    <value>デバイスカウンタの取得中...</value>
+  </data>
+  <data name="ID_STATUS_COUNT_TIMEOUT_MSG" xml:space="preserve">
+    <value>デバイスカウンタの取得タイムアウト</value>
+  </data>
+  <data name="ID_STATUS_DEF_MSG" xml:space="preserve">
+    <value>基本的なMFP情報を取得中、しばらくお待ちください...</value>
+  </data>
+  <data name="ID_STATUS_DEVSTATUS_MSG" xml:space="preserve">
+    <value>デバイスステータスを取得中...</value>
+  </data>
+  <data name="ID_STATUS_DEVSTATUS_TIMEOUT_MSG" xml:space="preserve">
+    <value>デバイスステータスフェッチタイムアウト</value>
+  </data>
+  <data name="ID_STATUS_FAILURE_MSG" xml:space="preserve">
+    <value>MFPから情報を取得できませんでした</value>
+  </data>
+  <data name="ID_STATUS_HWINFO_MSG" xml:space="preserve">
+    <value>デバイスのハードウェア情報を取得中...</value>
+  </data>
+  <data name="ID_STATUS_HWINFO_TIMEOUT_MSG" xml:space="preserve">
+    <value>デバイスハードウェア情報のフェッチタイムアウト</value>
+  </data>
+  <data name="ID_STATUS_SUCCESS_MSG" xml:space="preserve">
+    <value>すべての情報を正常に取得しました...</value>
+  </data>
+  <data name="ID_TIMEOUT_MSG" xml:space="preserve">
+    <value>MFPタイムアウトへのリクエスト</value>
+  </data>
+  <data name="ID_TOPACCESS" xml:space="preserve">
+    <value>MFP Webページ</value>
+  </data>
+  <data name="ipLabel.Text" xml:space="preserve">
+    <value>デフォルトのMFP IPアドレス</value>
+  </data>
+  <data name="linkText.Content" xml:space="preserve">
+    <value>MFP Webページ</value>
+  </data>
+  <data name="locLabel.Text" xml:space="preserve">
+    <value>物理的な位置：</value>
+  </data>
+  <data name="macLabel.Text" xml:space="preserve">
+    <value>物理アドレス</value>
+  </data>
+  <data name="manfLabel.Text" xml:space="preserve">
+    <value>メーカー：</value>
+  </data>
+  <data name="memExpLabel.Header" xml:space="preserve">
+    <value>メモリ</value>
+  </data>
+  <data name="memSizeLabel.Text" xml:space="preserve">
+    <value>サイズ：</value>
+  </data>
+  <data name="memStatusLabel.Text" xml:space="preserve">
+    <value>状態：</value>
+  </data>
+  <data name="modelLabel.Text" xml:space="preserve">
+    <value>モデル：</value>
+  </data>
+  <data name="mTonLabel.Text" xml:space="preserve">
+    <value>マゼンタトナー：</value>
+  </data>
+  <data name="nameLabel.Text" xml:space="preserve">
+    <value>名：</value>
+  </data>
+  <data name="noteText.Text" xml:space="preserve">
+    <value>注：この設定は、次のアプリの起動時にのみ反映されます。 デフォルトは基本MFP情報ページになります。</value>
+  </data>
+  <data name="notfctnsTab.Header" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="notfctnText.Text" xml:space="preserve">
+    <value>通知の有効化/無効化</value>
+  </data>
+  <data name="prinStatusLabel.Text" xml:space="preserve">
+    <value>プリンタステータス：</value>
+  </data>
+  <data name="refreshLabel.Label" xml:space="preserve">
+    <value>リフレッシュ</value>
+  </data>
+  <data name="saddleLabel.Text" xml:space="preserve">
+    <value>中綴じユニット：</value>
+  </data>
+  <data name="scanCountLabel.Text" xml:space="preserve">
+    <value>トータルスキャンカウンタ：</value>
+  </data>
+  <data name="serialLabel.Text" xml:space="preserve">
+    <value>シリアルナンバー：</value>
+  </data>
+  <data name="settingsLabel.Label" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="settingsTitle.Text" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="shiptypeLabel.Text" xml:space="preserve">
+    <value>出荷タイプ：</value>
+  </data>
+  <data name="stapleLabel.Text" xml:space="preserve">
+    <value>ステープルユニット：</value>
+  </data>
+  <data name="startLocationText.Text" xml:space="preserve">
+    <value>スタートアップ時にLaunch Pageを選択</value>
+  </data>
+  <data name="startupButtonText.Content" xml:space="preserve">
+    <value>起動</value>
+  </data>
+  <data name="startupTab.Header" xml:space="preserve">
+    <value>起動</value>
+  </data>
+  <data name="startupText.Text" xml:space="preserve">
+    <value>Windows起動時にこのアプリケーションを実行する</value>
+  </data>
+  <data name="statusExpLabel.Header" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="statusText.Text" xml:space="preserve">
+    <value>基本的なMFP情報を取得中、しばらくお待ちください...</value>
+  </data>
+  <data name="statusTextLabel.Text" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Univ MFP Viewer</value>
+  </data>
+  <data name="tonExpLabel.Header" xml:space="preserve">
+    <value>トナー</value>
+  </data>
+  <data name="tonStatusLabel.Text" xml:space="preserve">
+    <value>状態: </value>
+  </data>
+  <data name="totCountLabel.Text" xml:space="preserve">
+    <value>総印刷枚数：</value>
+  </data>
+  <data name="yTonLabel.Text" xml:space="preserve">
+    <value>イエロートナー：</value>
+  </data>
+  <data name="ID_ORG_NAME" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ID_STARTUP_DISABLED_USER_MSG" xml:space="preserve">
+    <value>スタートアップで実行したいのは分かっていますが、残念ながら\ nタスクマネージャから無効にした場合は、タスクマネージャの[スタートアップ]タブでこれを有効にしてください</value>
+  </data>
+  <data name="Header_IPAddress.Text" xml:space="preserve">
+    <value>IPアドレス</value>
+  </data>
+  <data name="Header_MacAddress.Text" xml:space="preserve">
+    <value>物理アドレス</value>
+  </data>
+  <data name="Header_Model.Text" xml:space="preserve">
+    <value>モデル</value>
+  </data>
+  <data name="Header_Name.Text" xml:space="preserve">
+    <value>プリンタ名</value>
+  </data>
+  <data name="Header_SerialNumber.Text" xml:space="preserve">
+    <value>シリアル番号</value>
+  </data>
+  <data name="IDS_CLEAR" xml:space="preserve">
+    <value>クリア</value>
+  </data>
+  <data name="IDS_DISCOVERMFP" xml:space="preserve">
+    <value>MFPの発見</value>
+  </data>
+  <data name="IDS_STARTDISCOVERY" xml:space="preserve">
+    <value>発見を開始する</value>
+  </data>
+  <data name="IDS_WAIT_MSG" xml:space="preserve">
+    <value>アプリケーションがプリンタ情報を取得している間、お待ちください...</value>
+  </data>
+  <data name="startButton.Content" xml:space="preserve">
+    <value>発見を開始する</value>
+  </data>
+  <data name="coverOpenNtfctnLabel.Content" xml:space="preserve">
+    <value>プリンタのドアが開いている</value>
+  </data>
+  <data name="drawEmptyNtfctnLabel.Content" xml:space="preserve">
+    <value>引き出しは紙切れです</value>
+  </data>
+  <data name="jobSuspendNtfctnLabel.Content" xml:space="preserve">
+    <value>文書が中断されました</value>
+  </data>
+  <data name="ID_NT_MSG_ADFOPEN" xml:space="preserve">
+    <value>オートドキュメントフィーダカバーが開いている - カバーを閉じてください</value>
+  </data>
+  <data name="ID_NT_MSG_ADUOPEN" xml:space="preserve">
+    <value>自動両面ユニットカバーが開いている - カバーを閉じてください</value>
+  </data>
+  <data name="ID_NT_MSG_DRAW1EMPTY" xml:space="preserve">
+    <value>引き出し1の用紙が空です - 用紙を追加してください</value>
+  </data>
+  <data name="ID_NT_MSG_DRAW1OPEN" xml:space="preserve">
+    <value>引き出し1扉が開いています - 扉を閉めてください</value>
+  </data>
+  <data name="ID_NT_MSG_DRAW2EMPTY" xml:space="preserve">
+    <value>引き出し2の用紙が空です - 用紙を追加してください</value>
+  </data>
+  <data name="ID_NT_MSG_DRAW2OPEN" xml:space="preserve">
+    <value>引き出し2扉が開いています - 扉を閉めてください</value>
+  </data>
+  <data name="ID_NT_TITLE_ADFOPEN" xml:space="preserve">
+    <value>ADFカバーオープン</value>
+  </data>
+  <data name="ID_NT_TITLE_ADUOPEN" xml:space="preserve">
+    <value>ADUカバーオープン</value>
+  </data>
+  <data name="ID_NT_TITLE_DRAW1EMPTY" xml:space="preserve">
+    <value>引き出し1の用紙が空です</value>
+  </data>
+  <data name="ID_NT_TITLE_DRAW1OPEN" xml:space="preserve">
+    <value>引き出し1オープン</value>
+  </data>
+  <data name="ID_NT_TITLE_DRAW2EMPTY" xml:space="preserve">
+    <value>引き出し2の用紙が空です</value>
+  </data>
+  <data name="ID_NT_TITLE_DRAW2OPEN" xml:space="preserve">
+    <value>引き出し2オープン</value>
+  </data>
+  <data name="ID_NT_TITLE_JOBSUSPEND" xml:space="preserve">
+    <value>ジョブが停止しました</value>
+  </data>
+  <data name="ID_NT_MSG_DRAW3EMPTY" xml:space="preserve">
+    <value>引き出し3の用紙が空です - 用紙を追加してください</value>
+  </data>
+  <data name="ID_NT_MSG_DRAW3OPEN" xml:space="preserve">
+    <value>引き出し3扉が開いています - 扉を閉めてください</value>
+  </data>
+  <data name="ID_NT_MSG_DRAW4EMPTY" xml:space="preserve">
+    <value>引き出し4の用紙が空です - 用紙を追加してください</value>
+  </data>
+  <data name="ID_NT_MSG_DRAW4OPEN" xml:space="preserve">
+    <value>引き出し4扉が開いています - 扉を閉めてください</value>
+  </data>
+  <data name="ID_NT_TITLE_DRAW3EMPTY" xml:space="preserve">
+    <value>引き出し3の用紙が空です</value>
+  </data>
+  <data name="ID_NT_TITLE_DRAW3OPEN" xml:space="preserve">
+    <value>引き出し3オープン</value>
+  </data>
+  <data name="ID_NT_TITLE_DRAW4EMPTY" xml:space="preserve">
+    <value>引き出し4の用紙が空です</value>
+  </data>
+  <data name="ID_NT_TITLE_DRAW4OPEN" xml:space="preserve">
+    <value>引き出し4オープン</value>
+  </data>
+  <data name="ID_NT_MSG_NEWWASTETONER" xml:space="preserve">
+    <value>新しい廃トナーボックスを準備する</value>
+  </data>
+  <data name="ID_NT_TITLE_NEWWASTETONER" xml:space="preserve">
+    <value>廃棄トナー</value>
+  </data>
+  <data name="newWasteTonerLabel.Content" xml:space="preserve">
+    <value>新しい廃トナーボックスを準備する</value>
+  </data>
+  <data name="refreshRateText.Header" xml:space="preserve">
+    <value>リフレッシュレート</value>
+  </data>
+  <data name="ID_SECONDS" xml:space="preserve">
+    <value> 秒</value>
+  </data>
+  <data name="noteLabel.Text" xml:space="preserve">
+    <value>注：この設定は、次のアプリの起動時にのみ反映されます。デフォルトは10秒です。</value>
+  </data>
+  <data name="ntfctnTitleText.Text" xml:space="preserve">
+    <value>ドキュメント通知</value>
+  </data>
+  <data name="refreshDescText.Text" xml:space="preserve">
+    <value>希望するリフレッシュレートを選択してください</value>
+  </data>
+  <data name="idSliderMaxVal.Text" xml:space="preserve">
+    <value>1分</value>
+  </data>
+  <data name="idSliderMinVal.Text" xml:space="preserve">
+    <value>10秒</value>
+  </data>
+  <data name="ID_MINUTE" xml:space="preserve">
+    <value>1分</value>
+  </data>
+  <data name="ID_REFRESH" xml:space="preserve">
+    <value>リフレッシュ....</value>
+  </data>
+</root>

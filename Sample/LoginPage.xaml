@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Sample.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Auto">
+        <RelativePanel x:Name="loginPanel" Background="LightGray">
+            <TextBlock x:Uid="titleText" x:Name="titleName" Text="Univ MFP Viewer" Style="{ThemeResource TitleTextBlockStyle}" Margin="10" FontSize="35" RelativePanel.AlignLeftWithPanel="True" />
+            <TextBlock x:Uid="headingText" x:Name="headingLabel" Text="Enter Login Credentials" Foreground="Green" FontSize="30" RelativePanel.Below="titleName" Margin="0,100,0,0" FontWeight="SemiBold" RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <Grid x:Name="loginGrid" RelativePanel.Below="headingLabel" Margin="0,100,0,0" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Uid="ipLabel" Text="Default MFP IP Address" FontSize="25" Foreground="Green" Margin="0,0,0,30" />
+                <TextBlock x:Name="ipValue" FontSize="25" Grid.Column="1" Margin="30,0,0,10" />
+
+                <TextBlock x:Uid="unameLabel" Text="User Name" FontSize="25" Foreground="Green" Grid.Row="1" Grid.Column="0" Margin="0,10" />
+                <TextBox x:Name="unameValue" FontSize="25" Margin="30,10" Grid.Row="1" Grid.Column="1" Width="300" />
+
+                <TextBlock x:Uid="passLabel" Text="Password" FontSize="25" Foreground="Green" Grid.Row="2" Grid.Column="0" Margin="0,10" />
+                <TextBox x:Name="passValue" FontSize="25" Margin="30,10" Grid.Row="2" Grid.Column="1" Width="300" />
+
+                <Button x:Uid="buttonText" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="Login" Padding="8" Margin="50" Width="200" BorderBrush="Green" Foreground="White" Background="Green" Click="Button_Click" />
+            </Grid>
+            <ProgressRing x:Name="progRing" RelativePanel.Below="loginGrid" RelativePanel.AlignHorizontalCenterWithPanel="True" IsActive="False" Height="100" Width="100" Margin="0,10" />
+            <TextBlock x:Uid="statusLabel" x:Name="statusText" RelativePanel.Below="progRing" FontStyle="Oblique" FontSize="25" Foreground="Green" Margin="0,20" RelativePanel.AlignHorizontalCenterWithPanel="True" />
+        </RelativePanel>
+    </ScrollViewer>
+</Page>

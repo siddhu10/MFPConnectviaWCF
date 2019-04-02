@@ -1,0 +1,23 @@
+﻿<UserControl x:Name="footerControl"
+    x:Class="Sample.FooterControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="25"
+    d:DesignWidth="500">
+
+    <RelativePanel>
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>-->
+
+        <TextBlock x:Name="statusLabel" Margin="10" Text="{Binding MFPStatus, ElementName=footerControl}" HorizontalTextAlignment="Left" FontSize="20" Foreground="Green" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" />
+        <TextBlock x:Name="ipLabel" Margin="10" Text="{Binding MFPIP, ElementName=footerControl}" Grid.Column="1" HorizontalTextAlignment="Right" FontSize="20" Foreground="Green" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.RightOf="statusLabel" />
+    <!--</Grid>-->
+    </RelativePanel>
+</UserControl>

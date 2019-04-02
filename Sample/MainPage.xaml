@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <NavigationView x:Name="navView" SelectionChanged="NavView_SelectionChanged" Loaded="NavView_Loaded" OpenPaneLength="160"
+                    Canvas.ZIndex="0" IsSettingsVisible="True" DisplayModeChanged="NavView_DisplayModeChanged" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <NavigationView.MenuItems>
+            <NavigationViewItem x:Uid="basicNavItem" x:Name="basicMenu" Content="Baisc MFP Info" Tag="basicInfo" Icon="Home" ToolTipService.ToolTip="Baisc MFP Info">
+            </NavigationViewItem>
+            <NavigationViewItem x:Uid="discNavItem" x:Name="discMenu" Content="Discover MFP" Tag="discInfo" Icon="World" ToolTipService.ToolTip="Discover MFP">
+            </NavigationViewItem>
+        </NavigationView.MenuItems>
+
+        <NavigationView.HeaderTemplate>
+            <DataTemplate>
+                <Grid Margin="24,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Uid="homePageTitle" Style="{StaticResource TitleTextBlockStyle}" FontSize="35" VerticalAlignment="Center" Text="Univ MFP Viewer" />
+                    <CommandBar Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" DefaultLabelPosition="Right" Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+                        <AppBarButton x:Uid="refreshLabel" x:Name="refreshButton" Label="Refresh" Icon="Refresh" Click="RefreshButton_Click" />
+                        <AppBarButton x:Uid="settingsLabel" x:Name="settingsButton" Label="Settings" Icon="Setting" Click="SettingsButton_Click" />
+                    </CommandBar>
+                </Grid>
+            </DataTemplate>
+        </NavigationView.HeaderTemplate>
+
+        <NavigationView.PaneFooter>
+            <HyperlinkButton x:Uid="linkText" x:Name="linkName" Content="Top Access" Click="LinkName_Click" Margin="48,0" FontSize="13" />
+        </NavigationView.PaneFooter>
+
+        <Frame x:Name="contentFrame" />
+    </NavigationView>
+</Page>
